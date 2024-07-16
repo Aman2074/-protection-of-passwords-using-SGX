@@ -1,0 +1,10 @@
+enclave {
+    trusted {
+        public void ecall_hash_password(const char* password, char* hashed_password, size_t max_len);
+        public void ecall_verify_password(const char* password, const char* hashed_password, bool* is_verified);
+    };
+
+    enclave_config {
+        ...
+    };
+};
